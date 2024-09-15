@@ -1,3 +1,3 @@
-Macroeconomics Project
+Python Projects
 
-Project using macroeconomic variables 
+Macroeconomics Project = Project using macroeconomic variables 
