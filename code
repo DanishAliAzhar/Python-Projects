@@ -1,0 +1,75 @@
+#   Goods Market 
+govt_spending = input("Has government spending increased/decreased/same? ").lower()
+consumption = input("Has consumption increased/decreased/same? ").lower()
+investment = input("Has investment increased/decreased/same? ").lower()
+net_exports = input("Have net exports increased/decreased/remained the same? ").lower()
+
+#   Money Market 
+money_demand = input("Has money demand increased/decreased/same? ").lower()
+money_supply = input("Has money supply increased/decreased/same? ").lower()
+interest_rate = input("Has interest rate increased/decreased/remained the same? ").lower()
+
+#   Other 
+inflation = input("Has inflation increased/decreased/same? ").lower()
+policy_rate = input("Has policy rate increased/decreased/same? ").lower()
+interbank_rate = input("Has interbank rate increased/decreased/same? ").lower()
+
+# Function to handle inputs and output responses for each variable
+def analyze_variable(var_name, var_value):
+    if var_value == "increased":
+        return f"{var_name} has increased, this might indicate expansionary pressure in the economy."
+    elif var_value == "decreased":
+        return f"{var_name} has decreased, this might indicate contractionary pressure in the economy."
+    elif var_value == "same":
+        return f"{var_name} has remained stable, suggesting no significant economic shift in this area."
+    else:
+        return f"Incorrect input for {var_name}, please provide 'increased', 'decreased', or 'same'."
+
+#   Analyzing and printing the output for each factor
+
+#   Goods Market
+print("\n--- Goods Market ---")
+print ("\n")
+print(analyze_variable("Government Spending", govt_spending))
+print ("\n")
+print(analyze_variable("Consumption", consumption))
+print ("\n")
+print(analyze_variable("Investment", investment))
+print ("\n")
+print(analyze_variable("Net Exports", net_exports))
+print ("\n")
+
+#   Money Market
+print("\n--- Money Market ---")
+print ("\n")
+print(analyze_variable("Money Demand", money_demand))
+print ("\n")
+print(analyze_variable("Money Supply", money_supply))
+print ("\n")
+print(analyze_variable("Interest Rate", interest_rate))
+print ("\n")
+
+#   Other Indicators
+print("\n--- Other Indicators ---")
+print ("\n")
+print(analyze_variable("Inflation", inflation))
+print ("\n")
+print(analyze_variable("Policy Rate", policy_rate))
+print ("\n")
+print(analyze_variable("Interbank Rate", interbank_rate))
+print ("\n")
+
+# Potential economic summary (basic assessment)
+if govt_spending == "increased" and consumption == "increased" and investment == "increased":
+    print("\nSummary: The goods market is showing signs of expansion, potentially leading to economic growth.")
+elif govt_spending == "decreased" and consumption == "decreased" and investment == "decreased":
+    print("\nSummary: The goods market is contracting, which may signal a slowing economy.")
+else:
+    print("\nSummary: Mixed signals in the goods market, further analysis required.")
+
+if money_demand == "increased" and money_supply == "increased" and interest_rate == "decreased":
+    print("The money market is showing signs of liquidity with lower borrowing costs.")
+elif money_demand == "decreased" and money_supply == "decreased" and interest_rate == "increased":
+    print("The money market may be tightening, leading to higher borrowing costs and reduced liquidity.")
+else:
+    print("Mixed signals in the money market, further assessment needed.")
